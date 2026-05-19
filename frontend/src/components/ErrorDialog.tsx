@@ -57,9 +57,9 @@ export default function ErrorDialog({ code, title, description, severity, subsys
             </div>
           </div>
         </div>
-        <div className="mt-6 flex gap-2 justify-end">
-          <button className="btn" type="button">OK</button>
-          <button className="btn" type="button">Pretend to Restart</button>
+        <div className="mt-6 flex gap-2">
+          <button className="btn flex-1" type="button">OK</button>
+          <button className="btn flex-1" type="button">Pretend to Restart</button>
         </div>
       </div>
     </div>
