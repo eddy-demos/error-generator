@@ -47,11 +47,9 @@ def upgrade() -> None:
         sa.Column("slot", sa.String(length=40), nullable=False, index=True),
         sa.Column("value", sa.String(length=120), nullable=False),
     )
-    op.create_index("ix_vocab_slot", "vocab", ["slot"])
 
 
 def downgrade() -> None:
-    op.drop_index("ix_vocab_slot", table_name="vocab")
     op.drop_table("vocab")
     op.drop_table("templates")
     op.drop_table("errors")
