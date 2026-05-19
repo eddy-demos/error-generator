@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: ["main"]
   workflow_dispatch:
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -14,7 +13,7 @@ concurrency:
 jobs:
   backend-test:
     name: Backend (pytest)
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-medium-4c-8g
     defaults:
       run:
         working-directory: backend
@@ -41,7 +40,7 @@ jobs:
 
   backend-migrations:
     name: Backend (alembic + seed)
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-medium-4c-8g
     defaults:
       run:
         working-directory: backend
@@ -89,7 +88,7 @@ jobs:
 
   frontend-test:
     name: Frontend (vitest + tsc + build)
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-medium-4c-8g
     defaults:
       run:
         working-directory: frontend
@@ -119,7 +118,7 @@ jobs:
 
   docker-build:
     name: Docker build (compose)
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-medium-4c-8g
     needs: [backend-test, frontend-test]
     steps:
       - uses: actions/checkout@v4
@@ -148,7 +147,7 @@ jobs:
 
   security-scan:
     name: Security scan (pip-audit + npm audit)
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-medium-4c-8g
     continue-on-error: true
     steps:
       - uses: actions/checkout@v4
