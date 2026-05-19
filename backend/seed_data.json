@@ -1,0 +1,88 @@
+{
+  "templates": [
+    {"kind": "title", "pattern": "{verb_past} {noun} into the {place}", "weight": 5},
+    {"kind": "title", "pattern": "{adjective} {noun} detected in {subsystem}", "weight": 4},
+    {"kind": "title", "pattern": "unexpected {noun} during {verb_gerund}", "weight": 5},
+    {"kind": "title", "pattern": "{subsystem} refused to {verb}", "weight": 3},
+    {"kind": "title", "pattern": "{noun} {verb_past} the {place} again", "weight": 3},
+    {"kind": "title", "pattern": "{adjective} {noun}: please {verb}", "weight": 2},
+    {"kind": "title", "pattern": "{noun} not found in {place}", "weight": 4},
+    {"kind": "title", "pattern": "{verb_gerund} {noun} timed out", "weight": 4},
+    {"kind": "title", "pattern": "{subsystem} entered a {adjective} state", "weight": 3},
+    {"kind": "title", "pattern": "could not {verb} the {noun}", "weight": 4},
+    {"kind": "title", "pattern": "{adjective} {noun} on line {place}", "weight": 2},
+    {"kind": "title", "pattern": "{noun} corrupted by {adjective} {noun2}", "weight": 2},
+    {"kind": "title", "pattern": "stack {verb_past} into the {place}", "weight": 3},
+    {"kind": "title", "pattern": "you cannot {verb} the {noun}", "weight": 2},
+    {"kind": "title", "pattern": "{noun} is {adjective} again", "weight": 3},
+
+    {"kind": "title", "severity_hint": "EXISTENTIAL", "pattern": "the {noun} is, but does not feel", "weight": 2},
+    {"kind": "title", "severity_hint": "EXISTENTIAL", "pattern": "we have always been {verb_gerund}", "weight": 2},
+    {"kind": "title", "severity_hint": "EXISTENTIAL", "pattern": "the {subsystem} dreams of {noun}", "weight": 2},
+    {"kind": "title", "severity_hint": "EXISTENTIAL", "pattern": "nothing was {verb_past}, and yet", "weight": 2},
+    {"kind": "title", "severity_hint": "EXISTENTIAL", "pattern": "{noun} contemplates the {place}", "weight": 2},
+
+    {"kind": "description", "pattern": "The {subsystem} attempted to {verb} but found only {noun}.", "weight": 5},
+    {"kind": "description", "pattern": "A {adjective} {noun} blocked the {place}. Try again, or don't.", "weight": 4},
+    {"kind": "description", "pattern": "{subsystem} reports: '{noun} is {adjective}'. We are not sure what this means.", "weight": 4},
+    {"kind": "description", "pattern": "The {noun} {verb_past} mid-{verb_gerund}. Recovery is unlikely.", "weight": 4},
+    {"kind": "description", "pattern": "Expected {noun}, received {adjective} {noun2} instead.", "weight": 5},
+    {"kind": "description", "pattern": "While {verb_gerund} the {noun}, the {place} gave up.", "weight": 4},
+    {"kind": "description", "pattern": "The kernel attempted to fold itself but ran out of {place}.", "weight": 3},
+    {"kind": "description", "pattern": "{noun} could not be {verb_past}: too {adjective}.", "weight": 3},
+    {"kind": "description", "pattern": "Operation completed, but with {adjective} feelings.", "weight": 2},
+    {"kind": "description", "pattern": "Please {verb} your {noun} and try again.", "weight": 3},
+
+    {"kind": "description", "severity_hint": "EXISTENTIAL", "pattern": "The process is, but does not feel.", "weight": 2},
+    {"kind": "description", "severity_hint": "EXISTENTIAL", "pattern": "We {verb_past} the {noun}, and the {noun2} watched.", "weight": 2},
+    {"kind": "description", "severity_hint": "EXISTENTIAL", "pattern": "Time is a flat {noun}. So is your {noun2}.", "weight": 2},
+    {"kind": "description", "severity_hint": "EXISTENTIAL", "pattern": "Somewhere, a {subsystem} weeps.", "weight": 2}
+  ],
+  "vocab": {
+    "verb_past": [
+      "overflowed", "folded", "unfolded", "screamed", "blinked", "ignored", "fumbled",
+      "yeeted", "misplaced", "buffered", "rejected", "compiled", "rewound", "exhaled",
+      "reconsidered", "panicked", "evaporated", "negotiated", "summoned", "regretted",
+      "spilled", "tangled", "ate", "lost", "found", "forgot", "remembered"
+    ],
+    "verb": [
+      "allocate", "release", "compile", "speak", "sleep", "remember", "reconcile",
+      "negotiate", "exit", "blink", "fold", "summon", "reboot", "consider", "fork",
+      "join", "yield", "wait", "hope", "rest", "refresh", "scream", "dream"
+    ],
+    "verb_gerund": [
+      "loading", "parsing", "folding", "unfolding", "screaming", "remembering",
+      "negotiating", "compiling", "linking", "rebooting", "blinking", "considering",
+      "spilling", "tangling", "yeeting", "dreaming", "waiting", "hoping"
+    ],
+    "noun": [
+      "semaphore", "buffer", "mutex", "thread", "packet", "kernel", "stack", "heap",
+      "cursor", "pointer", "context", "snapshot", "vibe", "promise", "callback",
+      "registry", "socket", "daemon", "fiber", "token", "checksum", "manifest",
+      "regret", "memory", "ghost", "context"
+    ],
+    "noun2": [
+      "tuple", "object", "string", "blob", "interrupt", "event", "signal", "monad",
+      "lambda", "frame", "node", "edge", "leaf", "cloud", "cache", "queue", "hash"
+    ],
+    "place": [
+      "carpet", "void", "DOM", "registry", "cloud", "bathtub", "drawer", "kitchen",
+      "afterlife", "stack", "heap", "abyss", "ether", "router", "filesystem",
+      "gutter", "couch", "fridge", "groupchat", "swamp"
+    ],
+    "adjective": [
+      "haunted", "smug", "soggy", "iridescent", "tired", "feral", "polite", "anxious",
+      "spicy", "yawning", "translucent", "moist", "tangled", "ancient", "performative",
+      "embarrassed", "loud", "shy", "passive-aggressive", "wholesome", "cursed"
+    ],
+    "subsystem": [
+      "kernel.mood", "net.vibes", "fs.regret", "auth.feelings", "ui.dread", "db.gossip",
+      "scheduler.therapy", "gc.grief", "io.melancholy", "render.hubris", "queue.envy",
+      "session.shame", "router.angst", "cache.ennui"
+    ],
+    "tag": [
+      "spooky", "vintage", "cursed", "soft", "epic", "tiny", "rare", "wholesome",
+      "feral", "regret"
+    ]
+  }
+}
